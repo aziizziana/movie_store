@@ -1,0 +1,12 @@
+Release 1
+- Add a movie
+- List all movies
+- Search for a movie
+
+Release 2
+- Print a statement of a customer's charges. Extend the program so that i can compute custom charges based on movies rented and how long they have been rented. Program should also print the type of movies rented.
+There are three kinds of movies;
+Regular, Children's and New Release
+
+Release 3
+- Calculate frequent renter points
