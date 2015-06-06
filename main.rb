@@ -6,6 +6,7 @@ $movie_store = MovieStore.new([])
 def display_menu
 	puts "Enter 1 to add a new movie"
 	puts "Enter 2 to display movies"
+	puts "Enter 3 to search for a movie"
 end
 
 def get_user_input
@@ -24,6 +25,11 @@ def respond_to_user_choice choice
 		$movie_store.add movie
 	elsif choice == 2
 		puts $movie_store.all
+	elsif choice == 3
+		puts "Enter the title of the movie"
+		movie_title = get_user_input
+		results = $movie_store.find_by_title(movie_title)
+        puts results
 	end
 end
 
