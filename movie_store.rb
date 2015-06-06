@@ -7,4 +7,8 @@ class MovieStore
 	def add(movie)
 		@movies << movie
 	end
+
+	def all
+		@movies
+	end
 end

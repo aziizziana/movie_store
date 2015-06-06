@@ -5,6 +5,7 @@ $movie_store = MovieStore.new([])
 
 def display_menu
 	puts "Enter 1 to add a new movie"
+	puts "Enter 2 to display movies"
 end
 
 def get_user_input
@@ -21,13 +22,20 @@ def respond_to_user_choice choice
 
 		movie = Movie.new([actor], title)
 		$movie_store.add movie
+	elsif choice == 2
+		puts $movie_store.all
 	end
 end
 
 def main
-	display_menu()
-	user_choice = get_user_input()
-	respond_to_user_choice(user_choice.to_i)
+	begin
+		display_menu()
+		user_choice = get_user_input()
+		respond_to_user_choice(user_choice.to_i)
+		puts "Press q to quit or Enter to continue"
+		user_choice = get_user_input
+		exit(0) if user_choice == "q"
+	end while true
 end
 
 main()

@@ -4,4 +4,8 @@ class Movie
 		@actors = actors
 		@title = title
 	end
+
+	def to_s
+		"#{@title} - Starring #{@actors.first}"
+	end
 end
